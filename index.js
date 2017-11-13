@@ -11,16 +11,28 @@ function destructivelyPrependDriver(name) {
   return drivers;
 }
 
-function destructivelyRemoveLastDriver(name) {
-  drivers.pop(name);
+function destructivelyRemoveLastDriver() {
+  drivers.pop();
   return drivers;
 }
 
-function destructivelyRemoveFirstDriver(name) {
-  drivers.shift(name);
+function destructivelyRemoveFirstDriver() {
+  drivers.shift();
   return drivers;
 }
 
 function appendDriver(name) {
   return [...drivers, name];
+}
+
+function prependDriver(name) {
+  return [name, ...drivers];
+}
+
+function removeFirstDriver() {
+  return drivers.slice(1);
+}
+
+function removeLastDriver() {
+  return drivers.slice(0, )
 }
